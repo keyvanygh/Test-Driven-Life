@@ -23,7 +23,7 @@
 		C0F07D2C2CAA952200E61279 /* RemoteTaskCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D2B2CAA952200E61279 /* RemoteTaskCreator.swift */; };
 		C0F07D2E2CAA953500E61279 /* TaskCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D2D2CAA953500E61279 /* TaskCreator.swift */; };
 		C0F07D312CAA956B00E61279 /* TaskEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D302CAA956B00E61279 /* TaskEntity.swift */; };
-		C0F07D342CAA959500E61279 /* RemoteTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D332CAA959500E61279 /* RemoteTask.swift */; };
+		C0F07D342CAA959500E61279 /* RemoteTaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D332CAA959500E61279 /* RemoteTaskModel.swift */; };
 		C0F07D362CAA95B800E61279 /* RemoteTaskMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D352CAA95B800E61279 /* RemoteTaskMapper.swift */; };
 		C0F07D392CAB246100E61279 /* RemoteTaskCreationParameters + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D382CAB246100E61279 /* RemoteTaskCreationParameters + extension.swift */; };
 		C0F07D3C2CAB2AF900E61279 /* URLRequest + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D3B2CAB2AF900E61279 /* URLRequest + extension.swift */; };
@@ -55,7 +55,7 @@
 		C0F07D2B2CAA952200E61279 /* RemoteTaskCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTaskCreator.swift; sourceTree = "<group>"; };
 		C0F07D2D2CAA953500E61279 /* TaskCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCreator.swift; sourceTree = "<group>"; };
 		C0F07D302CAA956B00E61279 /* TaskEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEntity.swift; sourceTree = "<group>"; };
-		C0F07D332CAA959500E61279 /* RemoteTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTask.swift; sourceTree = "<group>"; };
+		C0F07D332CAA959500E61279 /* RemoteTaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTaskModel.swift; sourceTree = "<group>"; };
 		C0F07D352CAA95B800E61279 /* RemoteTaskMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTaskMapper.swift; sourceTree = "<group>"; };
 		C0F07D382CAB246100E61279 /* RemoteTaskCreationParameters + extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RemoteTaskCreationParameters + extension.swift"; sourceTree = "<group>"; };
 		C0F07D3B2CAB2AF900E61279 /* URLRequest + extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest + extension.swift"; sourceTree = "<group>"; };
@@ -159,7 +159,7 @@
 		C0F07D322CAA958600E61279 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C0F07D332CAA959500E61279 /* RemoteTask.swift */,
+				C0F07D332CAA959500E61279 /* RemoteTaskModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -309,7 +309,7 @@
 			files = (
 				C0F07D362CAA95B800E61279 /* RemoteTaskMapper.swift in Sources */,
 				C0F07D2C2CAA952200E61279 /* RemoteTaskCreator.swift in Sources */,
-				C0F07D342CAA959500E61279 /* RemoteTask.swift in Sources */,
+				C0F07D342CAA959500E61279 /* RemoteTaskModel.swift in Sources */,
 				C0F07D312CAA956B00E61279 /* TaskEntity.swift in Sources */,
 				C0F07D2E2CAA953500E61279 /* TaskCreator.swift in Sources */,
 			);
