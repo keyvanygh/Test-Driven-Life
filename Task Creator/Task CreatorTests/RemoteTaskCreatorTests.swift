@@ -21,6 +21,7 @@ public final class RemoteTaskCreator: TaskCreator {
     
     enum Error: Swift.Error {
         case clientNot200Reponse
+        case invalidData
     }
     
     init(client: HTTPClient, url: URL) {
@@ -29,7 +30,13 @@ public final class RemoteTaskCreator: TaskCreator {
     }
     
     public func create() async throws {
-        _ = try await client.request(.POST, to: url)
+        let (data, response) = try await client.request(.POST, to: url)
+        
+        guard response.isOk_200 else {
+            throw Error.clientNot200Reponse
+        }
+        
+        throw Error.invalidData
     }
     
 }
@@ -81,6 +88,39 @@ final class RemoteTaskCreatorTests: XCTestCase {
         }
     }
     
+    func test_loadTwice_requestDataFromURLTwice() async {
+        let url = URL.dummy
+        let (sut, client) = makeSUT(url: url)
+        
+        Task {
+            _ = try await sut.create()
+        }
+        
+        Task {
+            _ = try await sut.create()
+        }
+
+        await aFewMomentsLater()
+        
+        XCTAssertEqual(client.requestedURLs, [url, url])
+    }
+    
+    func test_create_throwsInvalidDataErrorOnInvalidClientDataResponse() async {
+        let url = URL.dummy
+        let (sut, client) = makeSUT(url: url)
+        let invalidData = ["invalidData": "invalidData"].data
+        
+        await expect(
+            {
+                try await sut.create()
+            },
+            toThrow: RemoteTaskCreator.Error.invalidData,
+            when: {
+                client.returns(with: (invalidData, .ok_200))
+            }
+        )
+    }
+    
     private func makeSUT(url: URL = .dummy) -> (RemoteTaskCreator, HTTPClientSpy) {
         let client = HTTPClientSpy()
         let sut = RemoteTaskCreator(client: client, url: url)
@@ -98,6 +138,7 @@ final class RemoteTaskCreatorTests: XCTestCase {
         let task = Task {
             do {
                 _ = try await action()
+                XCTFail("expected to throw but didn't")
             } catch {
                 let receivedError = error as? Error
                 XCTAssertEqual(receivedError, expectedError)
