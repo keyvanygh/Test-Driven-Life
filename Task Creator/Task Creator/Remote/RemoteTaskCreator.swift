@@ -22,8 +22,14 @@ public final class RemoteTaskCreator: TaskCreator {
         self.url = url
     }
     
-    public func create() async throws -> TaskEntity {
-        let (data, response) = try await client.request(.POST, to: url)
+    public func create(with parametesrs: TaskCreationParameters) async throws -> TaskEntity {
+        guard let parametesrs = parametesrs as? RemoteTaskCreationParameters else {
+            throw Error.invalidData
+        }
+        
+        let parametesrsData = try JSONEncoder().encode(parametesrs)
+
+        let (data, response) = try await client.request(.POST, to: url, body: parametesrsData)
         
         guard response.isOk_200 else {
             throw Error.clientNot200Reponse
@@ -36,3 +42,12 @@ public final class RemoteTaskCreator: TaskCreator {
         return task
     }
 }
+
+public struct RemoteTaskCreationParameters: TaskCreationParameters, Encodable {
+    public var title: String
+    
+    public init(title: String) {
+        self.title = title
+    }
+}
+

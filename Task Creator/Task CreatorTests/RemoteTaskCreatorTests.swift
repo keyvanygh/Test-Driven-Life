@@ -21,20 +21,18 @@ final class RemoteTaskCreatorTests: XCTestCase {
     func test_create_clientSendsExpectedURLRequest() async {
         let aURL: URL = .dummy
         let (sut, client) = makeSUT(url: aURL)
-        let taskJson: [String: Any] = ["title": "a task"]
+        let parameters = RemoteTaskCreationParameters(title: "a test task")
         
-        var expectedURLRequest = URLRequest(url: aURL)
-        expectedURLRequest.httpMethod = HttpMethod.POST.rawValue
-        expectedURLRequest.allHTTPHeaderFields = [:]
-        expectedURLRequest.httpBody = taskJson.data
-        
+        var expectedURLRequest = URLRequest(url: aURL, with: parameters)
+
         Task {
-            _ = try await sut.create()
+            _ = try await sut.create(with: parameters)
         }
         
         await aFewMomentsLater()
         
         XCTAssertEqual(client.requests, [expectedURLRequest])
+        XCTAssertEqual(client.requests.first!.httpBody, expectedURLRequest.httpBody)
     }
     
     func test_create_throwOnNot200HttpResponse() async {
@@ -45,7 +43,7 @@ final class RemoteTaskCreatorTests: XCTestCase {
             
             await expect(
                 {
-                    _ = try await sut.create()
+                    _ = try await sut.create(with: RemoteTaskCreationParameters.any)
                 },
                 toThrow: RemoteTaskCreator.Error.clientNot200Reponse,
                 when: {
@@ -63,11 +61,11 @@ final class RemoteTaskCreatorTests: XCTestCase {
         let (sut, client) = makeSUT(url: url)
         
         Task {
-            _ = try await sut.create()
+            _ = try await sut.create(with: RemoteTaskCreationParameters.any)
         }
         
         Task {
-            _ = try await sut.create()
+            _ = try await sut.create(with: RemoteTaskCreationParameters.any)
         }
 
         await aFewMomentsLater()
@@ -82,7 +80,7 @@ final class RemoteTaskCreatorTests: XCTestCase {
         
         await expect(
             {
-                _ = try await sut.create()
+                _ = try await sut.create(with: RemoteTaskCreationParameters.any)
             },
             toThrow: RemoteTaskCreator.Error.invalidData,
             when: {
@@ -99,7 +97,7 @@ final class RemoteTaskCreatorTests: XCTestCase {
         
         await expect(
             {
-                try await sut.create()
+                try await sut.create(with: RemoteTaskCreationParameters.any)
             },
             toReturn: expectedTask,
             when: {
