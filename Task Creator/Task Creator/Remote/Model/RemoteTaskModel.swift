@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RemoteTask: Codable {
+struct RemoteTaskModel: Codable {
     let title: String
     
     var entity: TaskEntity {
