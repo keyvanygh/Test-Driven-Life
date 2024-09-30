@@ -8,8 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		C0F07CEC2CAA7C7000E61279 /* Task_Creator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F07CE32CAA7C7000E61279 /* Task_Creator.framework */; };
-		C0F07CF12CAA7C7000E61279 /* Task_CreatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07CF02CAA7C7000E61279 /* Task_CreatorTests.swift */; };
 		C0F07CF22CAA7C7000E61279 /* Task_Creator.h in Headers */ = {isa = PBXBuildFile; fileRef = C0F07CE62CAA7C7000E61279 /* Task_Creator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C0F07CFC2CAA7CCB00E61279 /* RemoteTaskCreatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07CFB2CAA7CCB00E61279 /* RemoteTaskCreatorTests.swift */; };
+		C0F07CFF2CAA7DEF00E61279 /* HttpClient in Frameworks */ = {isa = PBXBuildFile; productRef = C0F07CFE2CAA7DEF00E61279 /* HttpClient */; };
+		C0F07D022CAA7DF900E61279 /* ConcurrencyExtras in Frameworks */ = {isa = PBXBuildFile; productRef = C0F07D012CAA7DF900E61279 /* ConcurrencyExtras */; };
+		C0F07D0C2CAA7EF800E61279 /* Data + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D042CAA7EF800E61279 /* Data + extension.swift */; };
+		C0F07D0D2CAA7EF800E61279 /* Dictionary + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D052CAA7EF800E61279 /* Dictionary + extension.swift */; };
+		C0F07D0E2CAA7EF800E61279 /* HttpMethod + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D062CAA7EF800E61279 /* HttpMethod + extension.swift */; };
+		C0F07D0F2CAA7EF800E61279 /* HTTPURLResponse + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D072CAA7EF800E61279 /* HTTPURLResponse + extension.swift */; };
+		C0F07D102CAA7EF800E61279 /* InputStream + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D082CAA7EF800E61279 /* InputStream + extension.swift */; };
+		C0F07D112CAA7EF800E61279 /* NSError + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D092CAA7EF800E61279 /* NSError + extension.swift */; };
+		C0F07D122CAA7EF800E61279 /* URL + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D0A2CAA7EF800E61279 /* URL + extension.swift */; };
+		C0F07D142CAA7F5800E61279 /* HTTPClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D132CAA7F5800E61279 /* HTTPClientSpy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,7 +36,15 @@
 		C0F07CE32CAA7C7000E61279 /* Task_Creator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Task_Creator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0F07CE62CAA7C7000E61279 /* Task_Creator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Task_Creator.h; sourceTree = "<group>"; };
 		C0F07CEB2CAA7C7000E61279 /* Task CreatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Task CreatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C0F07CF02CAA7C7000E61279 /* Task_CreatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_CreatorTests.swift; sourceTree = "<group>"; };
+		C0F07CFB2CAA7CCB00E61279 /* RemoteTaskCreatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTaskCreatorTests.swift; sourceTree = "<group>"; };
+		C0F07D042CAA7EF800E61279 /* Data + extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data + extension.swift"; sourceTree = "<group>"; };
+		C0F07D052CAA7EF800E61279 /* Dictionary + extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary + extension.swift"; sourceTree = "<group>"; };
+		C0F07D062CAA7EF800E61279 /* HttpMethod + extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HttpMethod + extension.swift"; sourceTree = "<group>"; };
+		C0F07D072CAA7EF800E61279 /* HTTPURLResponse + extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse + extension.swift"; sourceTree = "<group>"; };
+		C0F07D082CAA7EF800E61279 /* InputStream + extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InputStream + extension.swift"; sourceTree = "<group>"; };
+		C0F07D092CAA7EF800E61279 /* NSError + extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError + extension.swift"; sourceTree = "<group>"; };
+		C0F07D0A2CAA7EF800E61279 /* URL + extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL + extension.swift"; sourceTree = "<group>"; };
+		C0F07D132CAA7F5800E61279 /* HTTPClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientSpy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0F07CFF2CAA7DEF00E61279 /* HttpClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +61,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0F07CEC2CAA7C7000E61279 /* Task_Creator.framework in Frameworks */,
+				C0F07D022CAA7DF900E61279 /* ConcurrencyExtras in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,9 +97,34 @@
 		C0F07CEF2CAA7C7000E61279 /* Task CreatorTests */ = {
 			isa = PBXGroup;
 			children = (
-				C0F07CF02CAA7C7000E61279 /* Task_CreatorTests.swift */,
+				C0F07D032CAA7E1300E61279 /* HTTPClient Test Helpers */,
+				C0F07CFB2CAA7CCB00E61279 /* RemoteTaskCreatorTests.swift */,
 			);
 			path = "Task CreatorTests";
+			sourceTree = "<group>";
+		};
+		C0F07D032CAA7E1300E61279 /* HTTPClient Test Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C0F07D0B2CAA7EF800E61279 /* Extensions */,
+				C0F07D132CAA7F5800E61279 /* HTTPClientSpy.swift */,
+			);
+			path = "HTTPClient Test Helpers";
+			sourceTree = "<group>";
+		};
+		C0F07D0B2CAA7EF800E61279 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C0F07D042CAA7EF800E61279 /* Data + extension.swift */,
+				C0F07D052CAA7EF800E61279 /* Dictionary + extension.swift */,
+				C0F07D062CAA7EF800E61279 /* HttpMethod + extension.swift */,
+				C0F07D072CAA7EF800E61279 /* HTTPURLResponse + extension.swift */,
+				C0F07D082CAA7EF800E61279 /* InputStream + extension.swift */,
+				C0F07D092CAA7EF800E61279 /* NSError + extension.swift */,
+				C0F07D0A2CAA7EF800E61279 /* URL + extension.swift */,
+			);
+			name = Extensions;
+			path = "../../../../../../Library/Developer/Xcode/DerivedData/Task_Creator-dqkyxjzvjfdsobcxrcryalejtplg/SourcePackages/checkouts/HttpClient/Tests/HttpClientTests/Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,6 +155,9 @@
 			dependencies = (
 			);
 			name = "Task Creator";
+			packageProductDependencies = (
+				C0F07CFE2CAA7DEF00E61279 /* HttpClient */,
+			);
 			productName = "Task Creator";
 			productReference = C0F07CE32CAA7C7000E61279 /* Task_Creator.framework */;
 			productType = "com.apple.product-type.framework";
@@ -128,6 +176,9 @@
 				C0F07CEE2CAA7C7000E61279 /* PBXTargetDependency */,
 			);
 			name = "Task CreatorTests";
+			packageProductDependencies = (
+				C0F07D012CAA7DF900E61279 /* ConcurrencyExtras */,
+			);
 			productName = "Task CreatorTests";
 			productReference = C0F07CEB2CAA7C7000E61279 /* Task CreatorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -159,6 +210,10 @@
 				Base,
 			);
 			mainGroup = C0F07CD92CAA7C7000E61279;
+			packageReferences = (
+				C0F07CFD2CAA7DEF00E61279 /* XCRemoteSwiftPackageReference "HttpClient" */,
+				C0F07D002CAA7DF900E61279 /* XCRemoteSwiftPackageReference "swift-concurrency-extras" */,
+			);
 			productRefGroup = C0F07CE42CAA7C7000E61279 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -198,7 +253,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0F07CF12CAA7C7000E61279 /* Task_CreatorTests.swift in Sources */,
+				C0F07D0E2CAA7EF800E61279 /* HttpMethod + extension.swift in Sources */,
+				C0F07D112CAA7EF800E61279 /* NSError + extension.swift in Sources */,
+				C0F07CFC2CAA7CCB00E61279 /* RemoteTaskCreatorTests.swift in Sources */,
+				C0F07D122CAA7EF800E61279 /* URL + extension.swift in Sources */,
+				C0F07D102CAA7EF800E61279 /* InputStream + extension.swift in Sources */,
+				C0F07D0F2CAA7EF800E61279 /* HTTPURLResponse + extension.swift in Sources */,
+				C0F07D0C2CAA7EF800E61279 /* Data + extension.swift in Sources */,
+				C0F07D0D2CAA7EF800E61279 /* Dictionary + extension.swift in Sources */,
+				C0F07D142CAA7F5800E61279 /* HTTPClientSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +527,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C0F07CFD2CAA7DEF00E61279 /* XCRemoteSwiftPackageReference "HttpClient" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/keyvanygh/HttpClient";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		C0F07D002CAA7DF900E61279 /* XCRemoteSwiftPackageReference "swift-concurrency-extras" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-concurrency-extras";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C0F07CFE2CAA7DEF00E61279 /* HttpClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0F07CFD2CAA7DEF00E61279 /* XCRemoteSwiftPackageReference "HttpClient" */;
+			productName = HttpClient;
+		};
+		C0F07D012CAA7DF900E61279 /* ConcurrencyExtras */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0F07D002CAA7DF900E61279 /* XCRemoteSwiftPackageReference "swift-concurrency-extras" */;
+			productName = ConcurrencyExtras;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C0F07CDA2CAA7C7000E61279 /* Project object */;
 }

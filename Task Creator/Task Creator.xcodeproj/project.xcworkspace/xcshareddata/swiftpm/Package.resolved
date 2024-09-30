@@ -1,0 +1,24 @@
+{
+  "originHash" : "3935ac299f8e6ec3fa7395bf539b59d1153a1619854aed4a3ceff646141c3e42",
+  "pins" : [
+    {
+      "identity" : "httpclient",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/keyvanygh/HttpClient",
+      "state" : {
+        "revision" : "65198fd645e8b321fd9ac09db8ba509d3cd48219",
+        "version" : "1.0.10"
+      }
+    },
+    {
+      "identity" : "swift-concurrency-extras",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/swift-concurrency-extras",
+      "state" : {
+        "revision" : "6054df64b55186f08b6d0fd87152081b8ad8d613",
+        "version" : "1.2.0"
+      }
+    }
+  ],
+  "version" : 3
+}
