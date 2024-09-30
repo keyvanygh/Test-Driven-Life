@@ -10,37 +10,6 @@ import HttpClient
 import Task_Creator
 import ConcurrencyExtras
 
-public protocol TaskCreator {
-    func create() async throws
-}
-
-public final class RemoteTaskCreator: TaskCreator {
-    
-    let client: HTTPClient
-    let url: URL
-    
-    enum Error: Swift.Error {
-        case clientNot200Reponse
-        case invalidData
-    }
-    
-    init(client: HTTPClient, url: URL) {
-        self.client = client
-        self.url = url
-    }
-    
-    public func create() async throws {
-        let (data, response) = try await client.request(.POST, to: url)
-        
-        guard response.isOk_200 else {
-            throw Error.clientNot200Reponse
-        }
-        
-        throw Error.invalidData
-    }
-    
-}
-
 final class RemoteTaskCreatorTests: XCTestCase {
     
     func test_init_doseNotCreateTask() {
@@ -52,14 +21,15 @@ final class RemoteTaskCreatorTests: XCTestCase {
     func test_create_clientSendsExpectedURLRequest() async {
         let aURL: URL = .dummy
         let (sut, client) = makeSUT(url: aURL)
+        let taskJson: [String: Any] = ["title": "a task"]
         
         var expectedURLRequest = URLRequest(url: aURL)
         expectedURLRequest.httpMethod = HttpMethod.POST.rawValue
         expectedURLRequest.allHTTPHeaderFields = [:]
-        expectedURLRequest.httpBody = nil
+        expectedURLRequest.httpBody = taskJson.data
         
         Task {
-            try await sut.create()
+            _ = try await sut.create()
         }
         
         await aFewMomentsLater()
@@ -75,7 +45,7 @@ final class RemoteTaskCreatorTests: XCTestCase {
             
             await expect(
                 {
-                    try await sut.create()
+                    _ = try await sut.create()
                 },
                 toThrow: RemoteTaskCreator.Error.clientNot200Reponse,
                 when: {
@@ -112,11 +82,28 @@ final class RemoteTaskCreatorTests: XCTestCase {
         
         await expect(
             {
-                try await sut.create()
+                _ = try await sut.create()
             },
             toThrow: RemoteTaskCreator.Error.invalidData,
             when: {
                 client.returns(with: (invalidData, .ok_200))
+            }
+        )
+    }
+    
+    func test_create_returnsTaskEntityOnClientSuccessWithCorrectData() async {
+        let url = URL.dummy
+        let (sut, client) = makeSUT(url: url)
+        let validData = ["title": "a task title"].data
+        let expectedTask = TaskEntity(title: "a task title")
+        
+        await expect(
+            {
+                try await sut.create()
+            },
+            toReturn: expectedTask,
+            when: {
+                client.returns(with: (validData, .ok_200))
             }
         )
     }
@@ -151,6 +138,31 @@ final class RemoteTaskCreatorTests: XCTestCase {
             when()
         }
         
+        _ = await (task.value, when.value)
+    }
+    
+    private func expect<ReturnType: Equatable>(
+        _ action: @escaping () async throws -> ReturnType,
+        toReturn: ReturnType,
+        when: @escaping () -> (),
+        file: StaticString = #file,
+        line: UInt = #line
+    ) async {
+        
+        let task = Task {
+            do {
+                let result = try await action()
+                XCTAssertEqual(result, toReturn, file: file, line: line)
+            } catch {
+                XCTFail("expected to return \(toReturn), but throws \(error)", file: file, line: line)
+            }
+        }
+        
+        await aFewMomentsLater()
+
+        let when = Task {
+            when()
+        }
         _ = await (task.value, when.value)
     }
     

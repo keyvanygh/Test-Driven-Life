@@ -20,6 +20,11 @@
 		C0F07D252CAA873C00E61279 /* InputStream + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D1D2CAA873C00E61279 /* InputStream + extension.swift */; };
 		C0F07D262CAA873C00E61279 /* NSError + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D1E2CAA873C00E61279 /* NSError + extension.swift */; };
 		C0F07D272CAA873C00E61279 /* URL + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D1F2CAA873C00E61279 /* URL + extension.swift */; };
+		C0F07D2C2CAA952200E61279 /* RemoteTaskCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D2B2CAA952200E61279 /* RemoteTaskCreator.swift */; };
+		C0F07D2E2CAA953500E61279 /* TaskCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D2D2CAA953500E61279 /* TaskCreator.swift */; };
+		C0F07D312CAA956B00E61279 /* TaskEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D302CAA956B00E61279 /* TaskEntity.swift */; };
+		C0F07D342CAA959500E61279 /* RemoteTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D332CAA959500E61279 /* RemoteTask.swift */; };
+		C0F07D362CAA95B800E61279 /* RemoteTaskMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D352CAA95B800E61279 /* RemoteTaskMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +50,11 @@
 		C0F07D1D2CAA873C00E61279 /* InputStream + extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InputStream + extension.swift"; sourceTree = "<group>"; };
 		C0F07D1E2CAA873C00E61279 /* NSError + extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError + extension.swift"; sourceTree = "<group>"; };
 		C0F07D1F2CAA873C00E61279 /* URL + extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL + extension.swift"; sourceTree = "<group>"; };
+		C0F07D2B2CAA952200E61279 /* RemoteTaskCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTaskCreator.swift; sourceTree = "<group>"; };
+		C0F07D2D2CAA953500E61279 /* TaskCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCreator.swift; sourceTree = "<group>"; };
+		C0F07D302CAA956B00E61279 /* TaskEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEntity.swift; sourceTree = "<group>"; };
+		C0F07D332CAA959500E61279 /* RemoteTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTask.swift; sourceTree = "<group>"; };
+		C0F07D352CAA95B800E61279 /* RemoteTaskMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTaskMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +99,10 @@
 		C0F07CE52CAA7C7000E61279 /* Task Creator */ = {
 			isa = PBXGroup;
 			children = (
+				C0F07D2F2CAA955800E61279 /* Entity */,
+				C0F07D2A2CAA950100E61279 /* Remote */,
 				C0F07CE62CAA7C7000E61279 /* Task_Creator.h */,
+				C0F07D2D2CAA953500E61279 /* TaskCreator.swift */,
 			);
 			path = "Task Creator";
 			sourceTree = "<group>";
@@ -124,6 +137,32 @@
 				C0F07D1F2CAA873C00E61279 /* URL + extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C0F07D2A2CAA950100E61279 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				C0F07D322CAA958600E61279 /* Model */,
+				C0F07D2B2CAA952200E61279 /* RemoteTaskCreator.swift */,
+				C0F07D352CAA95B800E61279 /* RemoteTaskMapper.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		C0F07D2F2CAA955800E61279 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				C0F07D302CAA956B00E61279 /* TaskEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		C0F07D322CAA958600E61279 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C0F07D332CAA959500E61279 /* RemoteTask.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +233,7 @@
 				TargetAttributes = {
 					C0F07CE22CAA7C7000E61279 = {
 						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
 					};
 					C0F07CEA2CAA7C7000E61279 = {
 						CreatedOnToolsVersion = 15.4;
@@ -245,6 +285,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0F07D362CAA95B800E61279 /* RemoteTaskMapper.swift in Sources */,
+				C0F07D2C2CAA952200E61279 /* RemoteTaskCreator.swift in Sources */,
+				C0F07D342CAA959500E61279 /* RemoteTask.swift in Sources */,
+				C0F07D312CAA956B00E61279 /* TaskEntity.swift in Sources */,
+				C0F07D2E2CAA953500E61279 /* TaskCreator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +448,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -428,6 +474,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -436,6 +483,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -468,6 +516,7 @@
 		C0F07CF92CAA7C7000E61279 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 597HX97FLJ;
@@ -483,6 +532,7 @@
 		C0F07CFA2CAA7C7000E61279 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 597HX97FLJ;
