@@ -12,14 +12,14 @@
 		C0F07CFC2CAA7CCB00E61279 /* RemoteTaskCreatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07CFB2CAA7CCB00E61279 /* RemoteTaskCreatorTests.swift */; };
 		C0F07CFF2CAA7DEF00E61279 /* HttpClient in Frameworks */ = {isa = PBXBuildFile; productRef = C0F07CFE2CAA7DEF00E61279 /* HttpClient */; };
 		C0F07D022CAA7DF900E61279 /* ConcurrencyExtras in Frameworks */ = {isa = PBXBuildFile; productRef = C0F07D012CAA7DF900E61279 /* ConcurrencyExtras */; };
-		C0F07D0C2CAA7EF800E61279 /* Data + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D042CAA7EF800E61279 /* Data + extension.swift */; };
-		C0F07D0D2CAA7EF800E61279 /* Dictionary + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D052CAA7EF800E61279 /* Dictionary + extension.swift */; };
-		C0F07D0E2CAA7EF800E61279 /* HttpMethod + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D062CAA7EF800E61279 /* HttpMethod + extension.swift */; };
-		C0F07D0F2CAA7EF800E61279 /* HTTPURLResponse + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D072CAA7EF800E61279 /* HTTPURLResponse + extension.swift */; };
-		C0F07D102CAA7EF800E61279 /* InputStream + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D082CAA7EF800E61279 /* InputStream + extension.swift */; };
-		C0F07D112CAA7EF800E61279 /* NSError + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D092CAA7EF800E61279 /* NSError + extension.swift */; };
-		C0F07D122CAA7EF800E61279 /* URL + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D0A2CAA7EF800E61279 /* URL + extension.swift */; };
 		C0F07D142CAA7F5800E61279 /* HTTPClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D132CAA7F5800E61279 /* HTTPClientSpy.swift */; };
+		C0F07D212CAA873C00E61279 /* Data + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D192CAA873C00E61279 /* Data + extension.swift */; };
+		C0F07D222CAA873C00E61279 /* Dictionary + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D1A2CAA873C00E61279 /* Dictionary + extension.swift */; };
+		C0F07D232CAA873C00E61279 /* HttpMethod + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D1B2CAA873C00E61279 /* HttpMethod + extension.swift */; };
+		C0F07D242CAA873C00E61279 /* HTTPURLResponse + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D1C2CAA873C00E61279 /* HTTPURLResponse + extension.swift */; };
+		C0F07D252CAA873C00E61279 /* InputStream + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D1D2CAA873C00E61279 /* InputStream + extension.swift */; };
+		C0F07D262CAA873C00E61279 /* NSError + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D1E2CAA873C00E61279 /* NSError + extension.swift */; };
+		C0F07D272CAA873C00E61279 /* URL + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D1F2CAA873C00E61279 /* URL + extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,14 +37,14 @@
 		C0F07CE62CAA7C7000E61279 /* Task_Creator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Task_Creator.h; sourceTree = "<group>"; };
 		C0F07CEB2CAA7C7000E61279 /* Task CreatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Task CreatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0F07CFB2CAA7CCB00E61279 /* RemoteTaskCreatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTaskCreatorTests.swift; sourceTree = "<group>"; };
-		C0F07D042CAA7EF800E61279 /* Data + extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data + extension.swift"; sourceTree = "<group>"; };
-		C0F07D052CAA7EF800E61279 /* Dictionary + extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary + extension.swift"; sourceTree = "<group>"; };
-		C0F07D062CAA7EF800E61279 /* HttpMethod + extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HttpMethod + extension.swift"; sourceTree = "<group>"; };
-		C0F07D072CAA7EF800E61279 /* HTTPURLResponse + extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse + extension.swift"; sourceTree = "<group>"; };
-		C0F07D082CAA7EF800E61279 /* InputStream + extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InputStream + extension.swift"; sourceTree = "<group>"; };
-		C0F07D092CAA7EF800E61279 /* NSError + extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError + extension.swift"; sourceTree = "<group>"; };
-		C0F07D0A2CAA7EF800E61279 /* URL + extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL + extension.swift"; sourceTree = "<group>"; };
 		C0F07D132CAA7F5800E61279 /* HTTPClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientSpy.swift; sourceTree = "<group>"; };
+		C0F07D192CAA873C00E61279 /* Data + extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data + extension.swift"; sourceTree = "<group>"; };
+		C0F07D1A2CAA873C00E61279 /* Dictionary + extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary + extension.swift"; sourceTree = "<group>"; };
+		C0F07D1B2CAA873C00E61279 /* HttpMethod + extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HttpMethod + extension.swift"; sourceTree = "<group>"; };
+		C0F07D1C2CAA873C00E61279 /* HTTPURLResponse + extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse + extension.swift"; sourceTree = "<group>"; };
+		C0F07D1D2CAA873C00E61279 /* InputStream + extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InputStream + extension.swift"; sourceTree = "<group>"; };
+		C0F07D1E2CAA873C00E61279 /* NSError + extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError + extension.swift"; sourceTree = "<group>"; };
+		C0F07D1F2CAA873C00E61279 /* URL + extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL + extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,25 +106,24 @@
 		C0F07D032CAA7E1300E61279 /* HTTPClient Test Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				C0F07D0B2CAA7EF800E61279 /* Extensions */,
+				C0F07D202CAA873C00E61279 /* Extensions */,
 				C0F07D132CAA7F5800E61279 /* HTTPClientSpy.swift */,
 			);
 			path = "HTTPClient Test Helpers";
 			sourceTree = "<group>";
 		};
-		C0F07D0B2CAA7EF800E61279 /* Extensions */ = {
+		C0F07D202CAA873C00E61279 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				C0F07D042CAA7EF800E61279 /* Data + extension.swift */,
-				C0F07D052CAA7EF800E61279 /* Dictionary + extension.swift */,
-				C0F07D062CAA7EF800E61279 /* HttpMethod + extension.swift */,
-				C0F07D072CAA7EF800E61279 /* HTTPURLResponse + extension.swift */,
-				C0F07D082CAA7EF800E61279 /* InputStream + extension.swift */,
-				C0F07D092CAA7EF800E61279 /* NSError + extension.swift */,
-				C0F07D0A2CAA7EF800E61279 /* URL + extension.swift */,
+				C0F07D192CAA873C00E61279 /* Data + extension.swift */,
+				C0F07D1A2CAA873C00E61279 /* Dictionary + extension.swift */,
+				C0F07D1B2CAA873C00E61279 /* HttpMethod + extension.swift */,
+				C0F07D1C2CAA873C00E61279 /* HTTPURLResponse + extension.swift */,
+				C0F07D1D2CAA873C00E61279 /* InputStream + extension.swift */,
+				C0F07D1E2CAA873C00E61279 /* NSError + extension.swift */,
+				C0F07D1F2CAA873C00E61279 /* URL + extension.swift */,
 			);
-			name = Extensions;
-			path = "../../../../../../Library/Developer/Xcode/DerivedData/Task_Creator-dqkyxjzvjfdsobcxrcryalejtplg/SourcePackages/checkouts/HttpClient/Tests/HttpClientTests/Extensions";
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,15 +252,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0F07D0E2CAA7EF800E61279 /* HttpMethod + extension.swift in Sources */,
-				C0F07D112CAA7EF800E61279 /* NSError + extension.swift in Sources */,
+				C0F07D262CAA873C00E61279 /* NSError + extension.swift in Sources */,
+				C0F07D252CAA873C00E61279 /* InputStream + extension.swift in Sources */,
 				C0F07CFC2CAA7CCB00E61279 /* RemoteTaskCreatorTests.swift in Sources */,
-				C0F07D122CAA7EF800E61279 /* URL + extension.swift in Sources */,
-				C0F07D102CAA7EF800E61279 /* InputStream + extension.swift in Sources */,
-				C0F07D0F2CAA7EF800E61279 /* HTTPURLResponse + extension.swift in Sources */,
-				C0F07D0C2CAA7EF800E61279 /* Data + extension.swift in Sources */,
-				C0F07D0D2CAA7EF800E61279 /* Dictionary + extension.swift in Sources */,
+				C0F07D212CAA873C00E61279 /* Data + extension.swift in Sources */,
+				C0F07D232CAA873C00E61279 /* HttpMethod + extension.swift in Sources */,
+				C0F07D242CAA873C00E61279 /* HTTPURLResponse + extension.swift in Sources */,
+				C0F07D272CAA873C00E61279 /* URL + extension.swift in Sources */,
 				C0F07D142CAA7F5800E61279 /* HTTPClientSpy.swift in Sources */,
+				C0F07D222CAA873C00E61279 /* Dictionary + extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

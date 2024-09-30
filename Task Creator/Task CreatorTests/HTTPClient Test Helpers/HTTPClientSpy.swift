@@ -12,10 +12,14 @@ class HTTPClientSpy: HTTPClient {
     
     typealias Result = HTTPClient.Result
     typealias HttpMethod = HttpClient.HttpMethod
-    typealias Log = (result: CheckedContinuation<Result, Error>, url: URL)
+    typealias Log = (result: CheckedContinuation<Result, Error>, request: URLRequest)
     
     public var requestedURLs: [URL] {
-        return logs.map({ $0.url })
+        return logs.compactMap({ $0.request.url })
+    }
+
+    public var requests: [URLRequest] {
+        return logs.map { $0.request }
     }
     
     private var logs = [Log]()
@@ -26,8 +30,15 @@ class HTTPClientSpy: HTTPClient {
         header: [String : String]? = nil,
         body: Data? = nil
     ) async throws -> Result {
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = httpMethod.rawValue
+        urlRequest.httpBody = body
+        if let header {
+            urlRequest.allHTTPHeaderFields = urlRequest.allHTTPHeaderFields?.merging(header, uniquingKeysWith: { (_, new) in new })
+        }
+        
         return try await withCheckedThrowingContinuation { continuation in
-            logs.append((continuation,url))
+            logs.append((continuation, urlRequest))
         }
     }
     
