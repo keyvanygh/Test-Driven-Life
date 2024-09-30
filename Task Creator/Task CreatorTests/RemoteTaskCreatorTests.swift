@@ -29,7 +29,7 @@ public final class RemoteTaskCreator {
 final class RemoteTaskCreatorTests: XCTestCase {
     
     func test_init_doseNotCreateTask() {
-        let (sut, client) = makeSUT()
+        let (_, client) = makeSUT()
         
         XCTAssertEqual(client.requestedURLs, [])
     }
