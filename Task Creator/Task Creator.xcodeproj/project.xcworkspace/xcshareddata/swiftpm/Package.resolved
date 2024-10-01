@@ -1,6 +1,15 @@
 {
-  "originHash" : "3935ac299f8e6ec3fa7395bf539b59d1153a1619854aed4a3ceff646141c3e42",
+  "originHash" : "44cb6612b75e64e3ff32f0650ff6f0fb4cb71ebb2230a3720581b3ab3537d665",
   "pins" : [
+    {
+      "identity" : "datastore",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/keyvanygh/DataStore/",
+      "state" : {
+        "revision" : "66b2b266c09ba4527702d7acc7ac85442abfe00b",
+        "version" : "1.0.2"
+      }
+    },
     {
       "identity" : "httpclient",
       "kind" : "remoteSourceControl",

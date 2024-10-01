@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct RemoteTaskMapper {
+struct APITaskMapper {
     static func map(data: Data) throws -> TaskEntity {
-        return try JSONDecoder().decode(RemoteTaskModel.self, from: data).entity
+        return try JSONDecoder().decode(APITaskModel.self, from: data).entity
     }
 }

@@ -7,7 +7,7 @@
 
 import HttpClient
 
-public final class RemoteTaskCreator: TaskCreator {
+public final class APITaskCreator: TaskCreator {
     
     let client: HTTPClient
     let url: URL
@@ -35,7 +35,7 @@ public final class RemoteTaskCreator: TaskCreator {
             throw Error.clientNot200Reponse
         }
         
-        guard let task = try? RemoteTaskMapper.map(data: data) else {
+        guard let task = try? APITaskMapper.map(data: data) else {
             throw Error.invalidData
         }
         

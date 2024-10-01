@@ -20,13 +20,21 @@
 		C0F07D252CAA873C00E61279 /* InputStream + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D1D2CAA873C00E61279 /* InputStream + extension.swift */; };
 		C0F07D262CAA873C00E61279 /* NSError + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D1E2CAA873C00E61279 /* NSError + extension.swift */; };
 		C0F07D272CAA873C00E61279 /* URL + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D1F2CAA873C00E61279 /* URL + extension.swift */; };
-		C0F07D2C2CAA952200E61279 /* RemoteTaskCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D2B2CAA952200E61279 /* RemoteTaskCreator.swift */; };
+		C0F07D2C2CAA952200E61279 /* APITaskCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D2B2CAA952200E61279 /* APITaskCreator.swift */; };
 		C0F07D2E2CAA953500E61279 /* TaskCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D2D2CAA953500E61279 /* TaskCreator.swift */; };
 		C0F07D312CAA956B00E61279 /* TaskEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D302CAA956B00E61279 /* TaskEntity.swift */; };
-		C0F07D342CAA959500E61279 /* RemoteTaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D332CAA959500E61279 /* RemoteTaskModel.swift */; };
-		C0F07D362CAA95B800E61279 /* RemoteTaskMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D352CAA95B800E61279 /* RemoteTaskMapper.swift */; };
+		C0F07D342CAA959500E61279 /* APITaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D332CAA959500E61279 /* APITaskModel.swift */; };
+		C0F07D362CAA95B800E61279 /* APITaskMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D352CAA95B800E61279 /* APITaskMapper.swift */; };
 		C0F07D392CAB246100E61279 /* RemoteTaskCreationParameters + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D382CAB246100E61279 /* RemoteTaskCreationParameters + extension.swift */; };
 		C0F07D3C2CAB2AF900E61279 /* URLRequest + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D3B2CAB2AF900E61279 /* URLRequest + extension.swift */; };
+		C0F07D3F2CAB4F2500E61279 /* LocalTaskCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D3E2CAB4F2500E61279 /* LocalTaskCreator.swift */; };
+		C0F07D422CAB4F6300E61279 /* DataStore in Frameworks */ = {isa = PBXBuildFile; productRef = C0F07D412CAB4F6300E61279 /* DataStore */; };
+		C0F07D442CAB4FDF00E61279 /* LocalTaskCreatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D432CAB4FDF00E61279 /* LocalTaskCreatorTests.swift */; };
+		C0F07D4F2CAC919600E61279 /* TaskModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D4D2CAC919600E61279 /* TaskModel.xcdatamodeld */; };
+		C0F07D532CAC932600E61279 /* LocalTaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D522CAC932600E61279 /* LocalTaskModel.swift */; };
+		C0F07D552CAC935000E61279 /* CoreDataTaskObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D542CAC935000E61279 /* CoreDataTaskObject.swift */; };
+		C0F07D582CAC93AB00E61279 /* CoreDataStore + extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D572CAC93AA00E61279 /* CoreDataStore + extensions.swift */; };
+		C0F07D5E2CAC945900E61279 /* LocalTaskModel + extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D5D2CAC945900E61279 /* LocalTaskModel + extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,13 +60,20 @@
 		C0F07D1D2CAA873C00E61279 /* InputStream + extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InputStream + extension.swift"; sourceTree = "<group>"; };
 		C0F07D1E2CAA873C00E61279 /* NSError + extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError + extension.swift"; sourceTree = "<group>"; };
 		C0F07D1F2CAA873C00E61279 /* URL + extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL + extension.swift"; sourceTree = "<group>"; };
-		C0F07D2B2CAA952200E61279 /* RemoteTaskCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTaskCreator.swift; sourceTree = "<group>"; };
+		C0F07D2B2CAA952200E61279 /* APITaskCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITaskCreator.swift; sourceTree = "<group>"; };
 		C0F07D2D2CAA953500E61279 /* TaskCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCreator.swift; sourceTree = "<group>"; };
 		C0F07D302CAA956B00E61279 /* TaskEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEntity.swift; sourceTree = "<group>"; };
-		C0F07D332CAA959500E61279 /* RemoteTaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTaskModel.swift; sourceTree = "<group>"; };
-		C0F07D352CAA95B800E61279 /* RemoteTaskMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTaskMapper.swift; sourceTree = "<group>"; };
+		C0F07D332CAA959500E61279 /* APITaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITaskModel.swift; sourceTree = "<group>"; };
+		C0F07D352CAA95B800E61279 /* APITaskMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITaskMapper.swift; sourceTree = "<group>"; };
 		C0F07D382CAB246100E61279 /* RemoteTaskCreationParameters + extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RemoteTaskCreationParameters + extension.swift"; sourceTree = "<group>"; };
 		C0F07D3B2CAB2AF900E61279 /* URLRequest + extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest + extension.swift"; sourceTree = "<group>"; };
+		C0F07D3E2CAB4F2500E61279 /* LocalTaskCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalTaskCreator.swift; sourceTree = "<group>"; };
+		C0F07D432CAB4FDF00E61279 /* LocalTaskCreatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalTaskCreatorTests.swift; sourceTree = "<group>"; };
+		C0F07D4E2CAC919600E61279 /* TaskModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TaskModel.xcdatamodel; sourceTree = "<group>"; };
+		C0F07D522CAC932600E61279 /* LocalTaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalTaskModel.swift; sourceTree = "<group>"; };
+		C0F07D542CAC935000E61279 /* CoreDataTaskObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTaskObject.swift; sourceTree = "<group>"; };
+		C0F07D572CAC93AA00E61279 /* CoreDataStore + extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataStore + extensions.swift"; sourceTree = "<group>"; };
+		C0F07D5D2CAC945900E61279 /* LocalTaskModel + extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalTaskModel + extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0F07D422CAB4F6300E61279 /* DataStore in Frameworks */,
 				C0F07CFF2CAA7DEF00E61279 /* HttpClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,10 +119,9 @@
 		C0F07CE52CAA7C7000E61279 /* Task Creator */ = {
 			isa = PBXGroup;
 			children = (
-				C0F07D2F2CAA955800E61279 /* Entity */,
-				C0F07D2A2CAA950100E61279 /* Remote */,
+				C0F07D482CAC90AD00E61279 /* Domain Layer */,
+				C0F07D492CAC90B700E61279 /* Data Layer */,
 				C0F07CE62CAA7C7000E61279 /* Task_Creator.h */,
-				C0F07D2D2CAA953500E61279 /* TaskCreator.swift */,
 			);
 			path = "Task Creator";
 			sourceTree = "<group>";
@@ -116,6 +131,7 @@
 			children = (
 				C0F07D032CAA7E1300E61279 /* HTTPClient Test Helpers */,
 				C0F07CFB2CAA7CCB00E61279 /* RemoteTaskCreatorTests.swift */,
+				C0F07D432CAB4FDF00E61279 /* LocalTaskCreatorTests.swift */,
 			);
 			path = "Task CreatorTests";
 			sourceTree = "<group>";
@@ -138,14 +154,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		C0F07D2A2CAA950100E61279 /* Remote */ = {
+		C0F07D2A2CAA950100E61279 /* API */ = {
 			isa = PBXGroup;
 			children = (
 				C0F07D322CAA958600E61279 /* Model */,
-				C0F07D2B2CAA952200E61279 /* RemoteTaskCreator.swift */,
-				C0F07D352CAA95B800E61279 /* RemoteTaskMapper.swift */,
+				C0F07D2B2CAA952200E61279 /* APITaskCreator.swift */,
+				C0F07D352CAA95B800E61279 /* APITaskMapper.swift */,
 			);
-			path = Remote;
+			path = API;
 			sourceTree = "<group>";
 		};
 		C0F07D2F2CAA955800E61279 /* Entity */ = {
@@ -159,7 +175,7 @@
 		C0F07D322CAA958600E61279 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C0F07D332CAA959500E61279 /* RemoteTaskModel.swift */,
+				C0F07D332CAA959500E61279 /* APITaskModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -185,6 +201,69 @@
 				C0F07D1F2CAA873C00E61279 /* URL + extension.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		C0F07D3D2CAB4F1200E61279 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				C0F07D3E2CAB4F2500E61279 /* LocalTaskCreator.swift */,
+				C0F07D502CAC930700E61279 /* Model */,
+				C0F07D562CAC939600E61279 /* Extensions */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		C0F07D482CAC90AD00E61279 /* Domain Layer */ = {
+			isa = PBXGroup;
+			children = (
+				C0F07D2D2CAA953500E61279 /* TaskCreator.swift */,
+				C0F07D2F2CAA955800E61279 /* Entity */,
+			);
+			path = "Domain Layer";
+			sourceTree = "<group>";
+		};
+		C0F07D492CAC90B700E61279 /* Data Layer */ = {
+			isa = PBXGroup;
+			children = (
+				C0F07D2A2CAA950100E61279 /* API */,
+				C0F07D3D2CAB4F1200E61279 /* Local */,
+			);
+			path = "Data Layer";
+			sourceTree = "<group>";
+		};
+		C0F07D502CAC930700E61279 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C0F07D522CAC932600E61279 /* LocalTaskModel.swift */,
+				C0F07D512CAC931300E61279 /* CoreData */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C0F07D512CAC931300E61279 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C0F07D4D2CAC919600E61279 /* TaskModel.xcdatamodeld */,
+				C0F07D542CAC935000E61279 /* CoreDataTaskObject.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		C0F07D562CAC939600E61279 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C0F07D5C2CAC943D00E61279 /* CoreData */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C0F07D5C2CAC943D00E61279 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C0F07D572CAC93AA00E61279 /* CoreDataStore + extensions.swift */,
+				C0F07D5D2CAC945900E61279 /* LocalTaskModel + extensions.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +296,7 @@
 			name = "Task Creator";
 			packageProductDependencies = (
 				C0F07CFE2CAA7DEF00E61279 /* HttpClient */,
+				C0F07D412CAB4F6300E61279 /* DataStore */,
 			);
 			productName = "Task Creator";
 			productReference = C0F07CE32CAA7C7000E61279 /* Task_Creator.framework */;
@@ -274,6 +354,7 @@
 			packageReferences = (
 				C0F07CFD2CAA7DEF00E61279 /* XCRemoteSwiftPackageReference "HttpClient" */,
 				C0F07D002CAA7DF900E61279 /* XCRemoteSwiftPackageReference "swift-concurrency-extras" */,
+				C0F07D402CAB4F6300E61279 /* XCRemoteSwiftPackageReference "DataStore" */,
 			);
 			productRefGroup = C0F07CE42CAA7C7000E61279 /* Products */;
 			projectDirPath = "";
@@ -307,11 +388,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0F07D362CAA95B800E61279 /* RemoteTaskMapper.swift in Sources */,
-				C0F07D2C2CAA952200E61279 /* RemoteTaskCreator.swift in Sources */,
-				C0F07D342CAA959500E61279 /* RemoteTaskModel.swift in Sources */,
+				C0F07D362CAA95B800E61279 /* APITaskMapper.swift in Sources */,
+				C0F07D552CAC935000E61279 /* CoreDataTaskObject.swift in Sources */,
+				C0F07D582CAC93AB00E61279 /* CoreDataStore + extensions.swift in Sources */,
+				C0F07D2C2CAA952200E61279 /* APITaskCreator.swift in Sources */,
+				C0F07D342CAA959500E61279 /* APITaskModel.swift in Sources */,
 				C0F07D312CAA956B00E61279 /* TaskEntity.swift in Sources */,
+				C0F07D4F2CAC919600E61279 /* TaskModel.xcdatamodeld in Sources */,
 				C0F07D2E2CAA953500E61279 /* TaskCreator.swift in Sources */,
+				C0F07D5E2CAC945900E61279 /* LocalTaskModel + extensions.swift in Sources */,
+				C0F07D532CAC932600E61279 /* LocalTaskModel.swift in Sources */,
+				C0F07D3F2CAB4F2500E61279 /* LocalTaskCreator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +417,7 @@
 				C0F07D142CAA7F5800E61279 /* HTTPClientSpy.swift in Sources */,
 				C0F07D392CAB246100E61279 /* RemoteTaskCreationParameters + extension.swift in Sources */,
 				C0F07D222CAA873C00E61279 /* Dictionary + extension.swift in Sources */,
+				C0F07D442CAB4FDF00E61279 /* LocalTaskCreatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -628,6 +716,14 @@
 				minimumVersion = 1.2.0;
 			};
 		};
+		C0F07D402CAB4F6300E61279 /* XCRemoteSwiftPackageReference "DataStore" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/keyvanygh/DataStore/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -641,7 +737,25 @@
 			package = C0F07D002CAA7DF900E61279 /* XCRemoteSwiftPackageReference "swift-concurrency-extras" */;
 			productName = ConcurrencyExtras;
 		};
+		C0F07D412CAB4F6300E61279 /* DataStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0F07D402CAB4F6300E61279 /* XCRemoteSwiftPackageReference "DataStore" */;
+			productName = DataStore;
+		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		C0F07D4D2CAC919600E61279 /* TaskModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C0F07D4E2CAC919600E61279 /* TaskModel.xcdatamodel */,
+			);
+			currentVersion = C0F07D4E2CAC919600E61279 /* TaskModel.xcdatamodel */;
+			path = TaskModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C0F07CDA2CAA7C7000E61279 /* Project object */;
 }

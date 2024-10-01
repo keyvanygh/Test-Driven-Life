@@ -23,7 +23,7 @@ final class RemoteTaskCreatorTests: XCTestCase {
         let (sut, client) = makeSUT(url: aURL)
         let parameters = RemoteTaskCreationParameters(title: "a test task")
         
-        var expectedURLRequest = URLRequest(url: aURL, with: parameters)
+        let expectedURLRequest = URLRequest(url: aURL, with: parameters)
 
         Task {
             _ = try await sut.create(with: parameters)
@@ -45,7 +45,7 @@ final class RemoteTaskCreatorTests: XCTestCase {
                 {
                     _ = try await sut.create(with: RemoteTaskCreationParameters.any)
                 },
-                toThrow: RemoteTaskCreator.Error.clientNot200Reponse,
+                toThrow: APITaskCreator.Error.clientNot200Reponse,
                 when: {
                     client.returns(
                         with: (Data(),
@@ -82,7 +82,7 @@ final class RemoteTaskCreatorTests: XCTestCase {
             {
                 _ = try await sut.create(with: RemoteTaskCreationParameters.any)
             },
-            toThrow: RemoteTaskCreator.Error.invalidData,
+            toThrow: APITaskCreator.Error.invalidData,
             when: {
                 client.returns(with: (invalidData, .ok_200))
             }
@@ -106,9 +106,9 @@ final class RemoteTaskCreatorTests: XCTestCase {
         )
     }
     
-    private func makeSUT(url: URL = .dummy) -> (RemoteTaskCreator, HTTPClientSpy) {
+    private func makeSUT(url: URL = .dummy) -> (APITaskCreator, HTTPClientSpy) {
         let client = HTTPClientSpy()
-        let sut = RemoteTaskCreator(client: client, url: url)
+        let sut = APITaskCreator(client: client, url: url)
         return (sut, client)
     }
     
