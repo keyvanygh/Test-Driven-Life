@@ -35,6 +35,23 @@ final class LocalTaskCreatorTests: XCTestCase {
         
         XCTAssertEqual(store.events, [.save, .load])
     }
+
+    func test_create_returnsTaskStoreSaveSuccess() async throws {
+        let store = TaskDataStoreSpy()
+        let sut = LocalTaskCreator(store: store)
+        
+        Task {
+            try await sut.create(with: RemoteTaskCreationParameters.any)
+        }
+        
+        await aFewMomentsLater()
+        
+        store.returns(with: LocalTaskModel(title: ""))
+        
+        await aFewMomentsLater()
+        
+        XCTAssertEqual(store.events, [.save, .load])
+    }
     
     private func aFewMomentsLater() async {
         await Task.yield()

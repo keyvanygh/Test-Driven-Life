@@ -13,4 +13,8 @@ public struct LocalTaskModel {
     public init(title: String) {
         self.title = title
     }
+    
+    public var entity: TaskEntity {
+        return TaskEntity(title: title)
+    }
 }

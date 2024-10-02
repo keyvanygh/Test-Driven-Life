@@ -19,11 +19,20 @@ public class LocalTaskCreator: TaskCreator {
         self.store = store
     }
     
-    public func create(with parameters: any TaskCreationParameters) async throws -> TaskEntity {
+    public func create(with parameters: LocalTaskCreationParameters) async throws -> TaskEntity {
         let item = LocalTaskModel(title: parameters.title)
         
         try await store.save(item)
         let savedItem = try await store.load()
-        return TaskEntity(title: savedItem.title)
+        return savedItem.entity
     }
 }
+
+public struct LocalTaskCreationParameters: TaskCreationParameters {
+    public var title: String
+    
+    public init(title: String) {
+        self.title = title
+    }
+}
+

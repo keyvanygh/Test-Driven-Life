@@ -8,7 +8,8 @@
 import Foundation
 
 public protocol TaskCreator {
-    func create(with parameters: TaskCreationParameters) async throws -> TaskEntity
+    associatedtype Parameters: TaskCreationParameters
+    func create(with parameters: Parameters) async throws -> TaskEntity
 }
 
 public protocol TaskCreationParameters {

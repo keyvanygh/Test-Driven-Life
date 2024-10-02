@@ -22,11 +22,7 @@ public final class APITaskCreator: TaskCreator {
         self.url = url
     }
     
-    public func create(with parametesrs: TaskCreationParameters) async throws -> TaskEntity {
-        guard let parametesrs = parametesrs as? RemoteTaskCreationParameters else {
-            throw Error.invalidData
-        }
-        
+    public func create(with parametesrs: RemoteTaskCreationParameters) async throws -> TaskEntity {
         let parametesrsData = try JSONEncoder().encode(parametesrs)
 
         let (data, response) = try await client.request(.POST, to: url, body: parametesrsData)
