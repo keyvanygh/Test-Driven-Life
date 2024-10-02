@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/keyvanygh/DataStore/",
       "state" : {
-        "revision" : "66b2b266c09ba4527702d7acc7ac85442abfe00b",
-        "version" : "1.0.2"
+        "revision" : "19462cbc03d9a740c9eee59cb0fc223f44e62930",
+        "version" : "1.0.3"
       }
     },
     {

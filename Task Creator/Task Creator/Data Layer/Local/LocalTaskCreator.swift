@@ -22,9 +22,7 @@ public class LocalTaskCreator: TaskCreator {
     public func create(with parameters: LocalTaskCreationParameters) async throws -> TaskEntity {
         let item = LocalTaskModel(title: parameters.title)
         
-        try await store.save(item)
-        let savedItem = try await store.load()
-        return savedItem.entity
+        return try await store.save(item).entity
     }
 }
 

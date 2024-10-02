@@ -33,7 +33,7 @@ final class LocalTaskCreatorTests: XCTestCase {
         
         await aFewMomentsLater()
         
-        XCTAssertEqual(store.events, [.save, .load])
+        XCTAssertEqual(store.events, [.save])
     }
 
     func test_create_returnsTaskStoreSaveSuccess() async throws {
@@ -90,8 +90,8 @@ public class TaskDataStoreSpy: TaskDataStore {
         }
     }
     
-    public func save(_ item: Item) async throws {
-       _ = try await withCheckedThrowingContinuation { continuation in
+    public func save(_ item: Item) async throws -> Item {
+       return try await withCheckedThrowingContinuation { continuation in
             logs.append((continuation, .save))
         }
     }
