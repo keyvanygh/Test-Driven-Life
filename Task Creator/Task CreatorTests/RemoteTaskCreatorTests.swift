@@ -43,7 +43,7 @@ final class RemoteTaskCreatorTests: XCTestCase {
             
             await expect(
                 {
-                    _ = try await sut.create(with: RemoteTaskCreationParameters.any)
+                    _ = try await sut.create(with: .any)
                 },
                 toThrow: APITaskCreator.Error.clientNot200Reponse,
                 when: {
@@ -61,11 +61,11 @@ final class RemoteTaskCreatorTests: XCTestCase {
         let (sut, client) = makeSUT(url: url)
         
         Task {
-            _ = try await sut.create(with: RemoteTaskCreationParameters.any)
+            _ = try await sut.create(with: .any)
         }
         
         Task {
-            _ = try await sut.create(with: RemoteTaskCreationParameters.any)
+            _ = try await sut.create(with: .any)
         }
 
         await aFewMomentsLater()
@@ -80,7 +80,7 @@ final class RemoteTaskCreatorTests: XCTestCase {
         
         await expect(
             {
-                _ = try await sut.create(with: RemoteTaskCreationParameters.any)
+                _ = try await sut.create(with: .any)
             },
             toThrow: APITaskCreator.Error.invalidData,
             when: {
@@ -97,7 +97,7 @@ final class RemoteTaskCreatorTests: XCTestCase {
         
         await expect(
             {
-                try await sut.create(with: RemoteTaskCreationParameters.any)
+                try await sut.create(with: .any)
             },
             toReturn: expectedTask,
             when: {

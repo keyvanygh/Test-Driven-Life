@@ -24,7 +24,7 @@ final class LocalTaskCreatorTests: XCTestCase {
         let sut = LocalTaskCreator(store: store)
         
         Task {
-            try await sut.create(with: RemoteTaskCreationParameters.any)
+            try await sut.create(with: .any)
         }
         
         await aFewMomentsLater()
@@ -38,19 +38,22 @@ final class LocalTaskCreatorTests: XCTestCase {
 
     func test_create_returnsTaskStoreSaveSuccess() async throws {
         let store = TaskDataStoreSpy()
+        let parameters = LocalTaskCreationParameters(title: "a test task")
         let sut = LocalTaskCreator(store: store)
         
-        Task {
-            try await sut.create(with: RemoteTaskCreationParameters.any)
+        let task = Task {
+            try await sut.create(with: parameters)
         }
         
         await aFewMomentsLater()
         
-        store.returns(with: LocalTaskModel(title: ""))
+        store.returns(with: LocalTaskModel(title: parameters.title))
         
         await aFewMomentsLater()
         
-        XCTAssertEqual(store.events, [.save, .load])
+        let savedTask = try await task.value
+        
+        XCTAssertEqual(savedTask, TaskEntity(title: parameters.title))
     }
     
     private func aFewMomentsLater() async {

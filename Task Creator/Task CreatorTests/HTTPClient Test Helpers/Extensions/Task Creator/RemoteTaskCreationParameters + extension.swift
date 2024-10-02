@@ -8,6 +8,6 @@
 import Task_Creator
 
 extension RemoteTaskCreationParameters {
-    static var dummy: TaskCreationParameters { RemoteTaskCreationParameters(title: "a dummy task") }
-    static var any: TaskCreationParameters { RemoteTaskCreationParameters(title: "any task") }
+    static var dummy: RemoteTaskCreationParameters { RemoteTaskCreationParameters(title: "a dummy task") }
+    static var any: RemoteTaskCreationParameters { RemoteTaskCreationParameters(title: "any task") }
 }

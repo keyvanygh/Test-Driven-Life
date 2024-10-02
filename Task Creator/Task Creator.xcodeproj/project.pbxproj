@@ -35,6 +35,7 @@
 		C0F07D552CAC935000E61279 /* CoreDataTaskObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D542CAC935000E61279 /* CoreDataTaskObject.swift */; };
 		C0F07D582CAC93AB00E61279 /* CoreDataStore + extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D572CAC93AA00E61279 /* CoreDataStore + extensions.swift */; };
 		C0F07D5E2CAC945900E61279 /* LocalTaskModel + extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D5D2CAC945900E61279 /* LocalTaskModel + extensions.swift */; };
+		C0F07D602CAD34A900E61279 /* LocalTaskCreationParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F07D5F2CAD34A900E61279 /* LocalTaskCreationParameters.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		C0F07D542CAC935000E61279 /* CoreDataTaskObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTaskObject.swift; sourceTree = "<group>"; };
 		C0F07D572CAC93AA00E61279 /* CoreDataStore + extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataStore + extensions.swift"; sourceTree = "<group>"; };
 		C0F07D5D2CAC945900E61279 /* LocalTaskModel + extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalTaskModel + extensions.swift"; sourceTree = "<group>"; };
+		C0F07D5F2CAD34A900E61279 /* LocalTaskCreationParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalTaskCreationParameters.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 			children = (
 				C0F07D382CAB246100E61279 /* RemoteTaskCreationParameters + extension.swift */,
 				C0F07D3B2CAB2AF900E61279 /* URLRequest + extension.swift */,
+				C0F07D5F2CAD34A900E61279 /* LocalTaskCreationParameters.swift */,
 			);
 			path = "Task Creator";
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				C0F07D212CAA873C00E61279 /* Data + extension.swift in Sources */,
 				C0F07D232CAA873C00E61279 /* HttpMethod + extension.swift in Sources */,
 				C0F07D242CAA873C00E61279 /* HTTPURLResponse + extension.swift in Sources */,
+				C0F07D602CAD34A900E61279 /* LocalTaskCreationParameters.swift in Sources */,
 				C0F07D272CAA873C00E61279 /* URL + extension.swift in Sources */,
 				C0F07D142CAA7F5800E61279 /* HTTPClientSpy.swift in Sources */,
 				C0F07D392CAB246100E61279 /* RemoteTaskCreationParameters + extension.swift in Sources */,
