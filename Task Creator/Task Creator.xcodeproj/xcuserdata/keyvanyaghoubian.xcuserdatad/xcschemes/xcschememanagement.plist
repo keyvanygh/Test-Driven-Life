@@ -4,10 +4,43 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Task Creator iOS 1.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Task Creator iOS.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>Task Creator.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>C0F07CE22CAA7C7000E61279</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C0F07CEA2CAA7C7000E61279</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C0F07ECE2CB0727F00E61279</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C0F07ED52CB0727F00E61279</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

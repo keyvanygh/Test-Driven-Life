@@ -38,7 +38,7 @@ final class LocalTaskCreatorTests: XCTestCase {
 
     func test_create_returnsTaskStoreSaveSuccess() async throws {
         let store = TaskDataStoreSpy()
-        let parameters = LocalTaskCreationParameters(title: "a test task")
+        let parameters = TaskCreationParameters(title: "a test task")
         let sut = LocalTaskCreator(store: store)
         
         let task = Task {

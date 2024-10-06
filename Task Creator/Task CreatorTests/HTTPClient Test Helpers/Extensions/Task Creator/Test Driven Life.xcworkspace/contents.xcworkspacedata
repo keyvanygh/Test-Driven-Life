@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:../../../.."
+      name = "..">
+      <FileRef
+         location = "group:Task Creator.xcodeproj">
+      </FileRef>
+      <Group
+         location = "group:Task CreatorTests"
+         name = "Task CreatorTests">
+         <FileRef
+            location = "group:LocalTaskCreatorTests.swift">
+         </FileRef>
+         <FileRef
+            location = "group:RemoteTaskCreatorTests.swift">
+         </FileRef>
+         <Group
+            location = "group:HTTPClient Test Helpers"
+            name = "HTTPClient Test Helpers">
+            <FileRef
+               location = "group:HTTPClientSpy.swift">
+            </FileRef>
+            <Group
+               location = "group:Extensions"
+               name = "Extensions">
+               <Group
+                  location = "group:Task Creator"
+                  name = "Task Creator">
+                  <FileRef
+                     location = "group:URLRequest + extension.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:RemoteTaskCreationParameters + extension.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:LocalTaskCreationParameters.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:Test Driven Life.xcworkspace">
+                  </FileRef>
+               </Group>
+               <Group
+                  location = "group:Shared"
+                  name = "Shared">
+                  <FileRef
+                     location = "group:HttpMethod + extension.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:InputStream + extension.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:HTTPURLResponse + extension.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:URL + extension.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:NSError + extension.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:Dictionary + extension.swift">
+                  </FileRef>
+                  <FileRef
+                     location = "group:Data + extension.swift">
+                  </FileRef>
+               </Group>
+            </Group>
+         </Group>
+      </Group>
+      <Group
+         location = "group:Task Creator"
+         name = "Task Creator">
+         <Group
+            location = "group:Domain Layer"
+            name = "Domain Layer">
+            <Group
+               location = "group:Entity"
+               name = "Entity">
+               <FileRef
+                  location = "group:TaskEntity.swift">
+               </FileRef>
+            </Group>
+            <FileRef
+               location = "group:TaskCreator.swift">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:Task_Creator.h">
+         </FileRef>
+         <Group
+            location = "group:Data Layer"
+            name = "Data Layer">
+            <Group
+               location = "group:Local"
+               name = "Local">
+               <Group
+                  location = "group:Extensions"
+                  name = "Extensions">
+                  <Group
+                     location = "group:CoreData"
+                     name = "CoreData">
+                     <FileRef
+                        location = "group:LocalTaskModel + extensions.swift">
+                     </FileRef>
+                     <FileRef
+                        location = "group:CoreDataStore + extensions.swift">
+                     </FileRef>
+                  </Group>
+               </Group>
+               <FileRef
+                  location = "group:Task.xcdatamodeld">
+               </FileRef>
+               <Group
+                  location = "group:Model"
+                  name = "Model">
+                  <FileRef
+                     location = "group:LocalTaskModel.swift">
+                  </FileRef>
+                  <Group
+                     location = "group:CoreData"
+                     name = "CoreData">
+                     <FileRef
+                        location = "group:TaskModel.xcdatamodeld">
+                     </FileRef>
+                     <FileRef
+                        location = "group:CoreDataTaskObject.swift">
+                     </FileRef>
+                  </Group>
+               </Group>
+               <FileRef
+                  location = "group:LocalTaskCreator.swift">
+               </FileRef>
+            </Group>
+            <Group
+               location = "group:API"
+               name = "API">
+               <FileRef
+                  location = "group:APITaskMapper.swift">
+               </FileRef>
+               <Group
+                  location = "group:Model"
+                  name = "Model">
+                  <FileRef
+                     location = "group:APITaskModel.swift">
+                  </FileRef>
+               </Group>
+               <FileRef
+                  location = "group:APITaskCreator.swift">
+               </FileRef>
+            </Group>
+         </Group>
+      </Group>
+   </Group>
+</Workspace>

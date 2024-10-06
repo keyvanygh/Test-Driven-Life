@@ -21,7 +21,7 @@ final class RemoteTaskCreatorTests: XCTestCase {
     func test_create_clientSendsExpectedURLRequest() async {
         let aURL: URL = .dummy
         let (sut, client) = makeSUT(url: aURL)
-        let parameters = RemoteTaskCreationParameters(title: "a test task")
+        let parameters = TaskCreationParameters(title: "a test task")
         
         let expectedURLRequest = URLRequest(url: aURL, with: parameters)
 

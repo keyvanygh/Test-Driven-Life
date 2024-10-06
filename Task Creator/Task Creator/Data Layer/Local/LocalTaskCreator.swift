@@ -19,18 +19,8 @@ public class LocalTaskCreator: TaskCreator {
         self.store = store
     }
     
-    public func create(with parameters: LocalTaskCreationParameters) async throws -> TaskEntity {
+    public func create(with parameters: TaskCreationParameters) async throws -> TaskEntity {
         let item = LocalTaskModel(title: parameters.title)
-        
         return try await store.save(item).entity
     }
 }
-
-public struct LocalTaskCreationParameters: TaskCreationParameters {
-    public var title: String
-    
-    public init(title: String) {
-        self.title = title
-    }
-}
-

@@ -7,8 +7,12 @@
 
 import Foundation
 
-struct APITaskModel: Codable {
+public struct APITaskModel: Codable {
     let title: String
+    
+    public init(title: String) {
+        self.title = title
+    }
     
     var entity: TaskEntity {
         return TaskEntity(title: title)

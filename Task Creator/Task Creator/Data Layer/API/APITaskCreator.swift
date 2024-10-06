@@ -22,8 +22,8 @@ public final class APITaskCreator: TaskCreator {
         self.url = url
     }
     
-    public func create(with parametesrs: RemoteTaskCreationParameters) async throws -> TaskEntity {
-        let parametesrsData = try JSONEncoder().encode(parametesrs)
+    public func create(with parametesrs: TaskCreationParameters) async throws -> TaskEntity {
+        let parametesrsData = try JSONEncoder().encode(APITaskModel(title: parametesrs.title))
 
         let (data, response) = try await client.request(.POST, to: url, body: parametesrsData)
         
@@ -38,12 +38,3 @@ public final class APITaskCreator: TaskCreator {
         return task
     }
 }
-
-public struct RemoteTaskCreationParameters: TaskCreationParameters, Encodable {
-    public var title: String
-    
-    public init(title: String) {
-        self.title = title
-    }
-}
-

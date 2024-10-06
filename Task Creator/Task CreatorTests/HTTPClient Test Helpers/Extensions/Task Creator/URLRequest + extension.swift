@@ -10,11 +10,10 @@ import Task_Creator
 import HttpClient
 
 extension URLRequest {
-    init(url: URL, with parameters: RemoteTaskCreationParameters) {
+    init(url: URL, with parameters: TaskCreationParameters) {
         self.init(url: url)
         self.httpMethod = HttpMethod.POST.rawValue
         self.allHTTPHeaderFields = [:]
-        self.httpBody = try? JSONEncoder().encode(parameters)
-        
+        self.httpBody = try? JSONEncoder().encode(APITaskModel(title: parameters.title))
     }
 }

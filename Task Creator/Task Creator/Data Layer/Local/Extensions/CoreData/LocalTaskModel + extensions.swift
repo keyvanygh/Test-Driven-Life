@@ -10,15 +10,25 @@ import CoreData
 
 extension LocalTaskModel: CoreDataStoreable {
     public static func entityName() throws -> String {
-        return "testABD"
+        return "CoreDataTaskObject"
     }
     
     public static func map(storeObject: NSManagedObject) throws -> LocalTaskModel {
-        LocalTaskModel(title: "HI")
+        guard let storeObject = storeObject as? CoreDataTaskObject else {
+            throw CoreDataStore<LocalTaskModel>.StoreError.itemNotFound
+        }
+        return LocalTaskModel(title: storeObject.title)
     }
     
     public func storeObject(for store: any DataStore) async throws -> NSManagedObject {
-        throw NSError()
+        guard let coreDataStore = store as? CoreDataStore<LocalTaskModel> else {
+            throw CoreDataStore<LocalTaskModel>.StoreError.itemNotFound
+        }
+        guard let item = try await coreDataStore.item() as? CoreDataTaskObject else {
+            throw CoreDataStore<LocalTaskModel>.StoreError.itemNotFound
+        }
+        item.title = title
+        return item
     }
     
 }
